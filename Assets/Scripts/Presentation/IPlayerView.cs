@@ -5,6 +5,6 @@ namespace MVPFrogger.Presentation
     public interface IPlayerView
     {
         event Action ObstacleTouched;
-        void ShowLane(int laneIndex);
+        void ShowLane(int laneIndex, bool animated);
     }
 }

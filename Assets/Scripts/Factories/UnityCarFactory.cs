@@ -6,18 +6,18 @@ namespace MVPFrogger.Factories
 {
     public sealed class UnityCarFactory : ICarFactory
     {
-        private readonly GameObject carPrefab;
+        private readonly GameObject[] carPrefabs;
         private readonly Transform spawnPoint;
         private readonly Transform carsParent;
         private readonly CarMovementConfig movementConfig;
 
         public UnityCarFactory(
-            GameObject carPrefab,
+            GameObject[] carPrefabs,
             Transform spawnPoint,
             Transform carsParent,
             CarMovementConfig movementConfig)
         {
-            this.carPrefab = carPrefab;
+            this.carPrefabs = carPrefabs;
             this.spawnPoint = spawnPoint;
             this.carsParent = carsParent;
             this.movementConfig = movementConfig;
@@ -25,14 +25,27 @@ namespace MVPFrogger.Factories
 
         public void CreateCar()
         {
-            if (carPrefab == null || spawnPoint == null)
+            GameObject selectedPrefab = GetRandomPrefab();
+
+            if (selectedPrefab == null || spawnPoint == null)
             {
                 return;
             }
 
-            GameObject car = Object.Instantiate(carPrefab, spawnPoint.position, spawnPoint.rotation, carsParent);
+            GameObject car = Object.Instantiate(selectedPrefab, spawnPoint.position, spawnPoint.rotation, carsParent);
             ICarMovementConfigReceiver configReceiver = car.GetComponent<ICarMovementConfigReceiver>();
             configReceiver?.Configure(movementConfig);
+        }
+
+        private GameObject GetRandomPrefab()
+        {
+            if (carPrefabs == null || carPrefabs.Length == 0)
+            {
+                return null;
+            }
+
+            int randomIndex = Random.Range(0, carPrefabs.Length);
+            return carPrefabs[randomIndex];
         }
     }
 }

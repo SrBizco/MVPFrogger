@@ -11,13 +11,15 @@ namespace MVPFrogger.Presentation
         {
             this.model = model;
             this.view = view;
-            view.SetX(model.PositionX);
         }
+
+        public bool ReachedRouteEnd => model.ReachedRouteEnd;
 
         public void Tick(float deltaTime)
         {
+            float previousDistance = model.TravelledDistance;
             model.Advance(deltaTime);
-            view.SetX(model.PositionX);
+            view.Move(model.TravelledDistance - previousDistance);
         }
     }
 }

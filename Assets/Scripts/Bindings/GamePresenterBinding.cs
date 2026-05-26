@@ -10,6 +10,7 @@ namespace MVPFrogger.Bindings
         [SerializeField] private int totalLanes = 5;
         [SerializeField] private GameInputView inputView;
         [SerializeField] private PlayerView playerView;
+        [SerializeField] private PlayerAnimatorView playerAnimatorView;
         [SerializeField] private GameHudView hudView;
 
         private FroggerGamePresenter presenter;
@@ -17,7 +18,11 @@ namespace MVPFrogger.Bindings
         private void Awake()
         {
             FroggerGameModel model = new FroggerGameModel(totalLanes);
-            presenter = new FroggerGamePresenter(model, inputView, playerView, hudView);
+            IPlayerAnimationView animationView = playerAnimatorView != null
+                ? playerAnimatorView
+                : NullPlayerAnimationView.Instance;
+
+            presenter = new FroggerGamePresenter(model, inputView, playerView, hudView, animationView);
         }
 
         private void OnDestroy()

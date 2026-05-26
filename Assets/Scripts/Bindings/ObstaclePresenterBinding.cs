@@ -22,10 +22,9 @@ namespace MVPFrogger.Bindings
             }
 
             this.movementConfig = new CarMovementConfig(
-                movementConfig.MinX,
-                movementConfig.MaxX,
                 movementConfig.Speed,
-                movementConfig.DestroyWhenLeavingRoad);
+                movementConfig.TravelDistance,
+                movementConfig.DestroyWhenRouteEnds);
         }
 
         private void Start()
@@ -40,13 +39,9 @@ namespace MVPFrogger.Bindings
                 return;
             }
 
-            bool wrapAround = !movementConfig.DestroyWhenLeavingRoad;
             ObstacleModel model = new ObstacleModel(
-                obstacleView.CurrentX,
-                movementConfig.MinX,
-                movementConfig.MaxX,
                 movementConfig.Speed,
-                wrapAround);
+                movementConfig.TravelDistance);
             presenter = new ObstaclePresenter(model, obstacleView);
             initialized = true;
         }
@@ -56,17 +51,10 @@ namespace MVPFrogger.Bindings
             Initialize();
             presenter.Tick(Time.deltaTime);
 
-            if (movementConfig.DestroyWhenLeavingRoad && HasLeftRoad())
+            if (movementConfig.DestroyWhenRouteEnds && presenter.ReachedRouteEnd)
             {
                 Destroy(gameObject);
             }
-        }
-
-        private bool HasLeftRoad()
-        {
-            float currentX = obstacleView.CurrentX;
-            return movementConfig.Speed > 0f && currentX >= movementConfig.MaxX
-                || movementConfig.Speed < 0f && currentX <= movementConfig.MinX;
         }
     }
 }

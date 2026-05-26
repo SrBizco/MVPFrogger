@@ -5,21 +5,19 @@ namespace MVPFrogger.Configuration
     [Serializable]
     public sealed class CarMovementConfig
     {
-        public float MinX = -8f;
-        public float MaxX = 8f;
         public float Speed = 3f;
-        public bool DestroyWhenLeavingRoad = true;
+        public float TravelDistance = 18f;
+        public bool DestroyWhenRouteEnds = true;
 
         public CarMovementConfig()
         {
         }
 
-        public CarMovementConfig(float minX, float maxX, float speed, bool destroyWhenLeavingRoad)
+        public CarMovementConfig(float speed, float travelDistance, bool destroyWhenRouteEnds)
         {
-            MinX = minX;
-            MaxX = maxX;
             Speed = speed;
-            DestroyWhenLeavingRoad = destroyWhenLeavingRoad;
+            TravelDistance = travelDistance;
+            DestroyWhenRouteEnds = destroyWhenRouteEnds;
         }
     }
 }

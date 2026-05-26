@@ -7,15 +7,11 @@ namespace MVPFrogger.Views
     {
         [SerializeField] private Transform target;
 
-        public float CurrentX => Target.position.x;
-
         private Transform Target => target != null ? target : transform;
 
-        public void SetX(float x)
+        public void Move(float distance)
         {
-            Vector3 position = Target.position;
-            position.x = x;
-            Target.position = position;
+            Target.position += Target.forward * distance;
         }
     }
 }

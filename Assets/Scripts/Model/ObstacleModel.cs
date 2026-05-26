@@ -4,44 +4,26 @@ namespace MVPFrogger.Model
 {
     public sealed class ObstacleModel
     {
-        private readonly float minX;
-        private readonly float maxX;
         private readonly float speed;
-        private readonly bool wrapAround;
+        private readonly float travelDistance;
 
-        public ObstacleModel(float initialX, float minX, float maxX, float speed, bool wrapAround)
+        public ObstacleModel(float speed, float travelDistance)
         {
-            if (minX >= maxX)
+            if (travelDistance <= 0f)
             {
-                throw new ArgumentException("minX must be lower than maxX.");
+                throw new ArgumentException("Travel distance must be greater than zero.");
             }
 
-            PositionX = initialX;
-            this.minX = minX;
-            this.maxX = maxX;
             this.speed = speed;
-            this.wrapAround = wrapAround;
+            this.travelDistance = travelDistance;
         }
 
-        public float PositionX { get; private set; }
+        public float TravelledDistance { get; private set; }
+        public bool ReachedRouteEnd => TravelledDistance >= travelDistance;
 
         public void Advance(float deltaTime)
         {
-            PositionX += speed * deltaTime;
-
-            if (!wrapAround)
-            {
-                return;
-            }
-
-            if (speed > 0f && PositionX > maxX)
-            {
-                PositionX = minX;
-            }
-            else if (speed < 0f && PositionX < minX)
-            {
-                PositionX = maxX;
-            }
+            TravelledDistance += Math.Abs(speed) * deltaTime;
         }
     }
 }

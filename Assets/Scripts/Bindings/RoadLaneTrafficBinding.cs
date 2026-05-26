@@ -9,7 +9,7 @@ namespace MVPFrogger.Bindings
     public sealed class RoadLaneTrafficBinding : MonoBehaviour, ICarSpawnerView
     {
         [Header("Spawn")]
-        [SerializeField] private GameObject carPrefab;
+        [SerializeField] private GameObject[] carPrefabs;
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private Transform carsParent;
         [SerializeField] private float spawnInterval = 2f;
@@ -24,7 +24,7 @@ namespace MVPFrogger.Bindings
         private void Awake()
         {
             CarSpawnerModel model = new CarSpawnerModel(spawnInterval, initialDelay);
-            carFactory = new UnityCarFactory(carPrefab, spawnPoint, carsParent, carMovement);
+            carFactory = new UnityCarFactory(carPrefabs, spawnPoint, carsParent, carMovement);
             presenter = new CarSpawnerPresenter(model, this);
         }
 
