@@ -12,6 +12,7 @@ namespace MVPFrogger.Bindings
         [SerializeField] private PlayerView playerView;
         [SerializeField] private PlayerAnimatorView playerAnimatorView;
         [SerializeField] private GameHudView hudView;
+        [SerializeField] private UnitySceneNavigationView sceneNavigationView;
 
         private FroggerGamePresenter presenter;
 
@@ -21,8 +22,11 @@ namespace MVPFrogger.Bindings
             IPlayerAnimationView animationView = playerAnimatorView != null
                 ? playerAnimatorView
                 : NullPlayerAnimationView.Instance;
+            ISceneNavigationView navigationView = sceneNavigationView != null
+                ? sceneNavigationView
+                : NullSceneNavigationView.Instance;
 
-            presenter = new FroggerGamePresenter(model, inputView, playerView, hudView, animationView);
+            presenter = new FroggerGamePresenter(model, inputView, playerView, hudView, animationView, navigationView);
         }
 
         private void OnDestroy()

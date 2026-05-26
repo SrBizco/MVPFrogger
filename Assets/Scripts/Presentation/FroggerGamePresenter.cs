@@ -10,24 +10,29 @@ namespace MVPFrogger.Presentation
         private readonly IPlayerView playerView;
         private readonly IGameHudView hudView;
         private readonly IPlayerAnimationView playerAnimationView;
+        private readonly ISceneNavigationView sceneNavigationView;
 
         public FroggerGamePresenter(
             FroggerGameModel model,
             IGameInputView inputView,
             IPlayerView playerView,
             IGameHudView hudView,
-            IPlayerAnimationView playerAnimationView)
+            IPlayerAnimationView playerAnimationView,
+            ISceneNavigationView sceneNavigationView)
         {
             this.model = model;
             this.inputView = inputView;
             this.playerView = playerView;
             this.hudView = hudView;
             this.playerAnimationView = playerAnimationView;
+            this.sceneNavigationView = sceneNavigationView;
 
             inputView.MoveForwardRequested += OnMoveForwardRequested;
             inputView.MoveBackwardRequested += OnMoveBackwardRequested;
             inputView.RestartRequested += OnRestartRequested;
             playerView.ObstacleTouched += OnObstacleTouched;
+            hudView.PlayAgainRequested += OnPlayAgainRequested;
+            hudView.BackToMenuRequested += OnBackToMenuRequested;
 
             playerAnimationView.PlayIdle();
             playerView.ShowLane(model.CurrentLaneIndex, false);
@@ -40,6 +45,21 @@ namespace MVPFrogger.Presentation
             inputView.MoveBackwardRequested -= OnMoveBackwardRequested;
             inputView.RestartRequested -= OnRestartRequested;
             playerView.ObstacleTouched -= OnObstacleTouched;
+            hudView.PlayAgainRequested -= OnPlayAgainRequested;
+            hudView.BackToMenuRequested -= OnBackToMenuRequested;
+        }
+
+        private void OnPlayAgainRequested()
+        {
+            model.Restart();
+            playerAnimationView.PlayIdle();
+            playerView.ShowLane(model.CurrentLaneIndex, false);
+            RefreshHud();
+        }
+
+        private void OnBackToMenuRequested()
+        {
+            sceneNavigationView.LoadMainMenu();
         }
 
         private void OnMoveForwardRequested()
