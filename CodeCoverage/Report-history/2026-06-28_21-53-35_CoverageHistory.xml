@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2026-06-28_21-53-35" tag="">
+  <assembly name="MVPFrogger.Runtime">
+    <class name="MVPFrogger.Bindings.GamePresenterBinding" coveredlines="0" coverablelines="61" totallines="128" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Bindings.MainMenuPresenterBinding" coveredlines="0" coverablelines="10" totallines="34" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Bindings.ObstaclePresenterBinding" coveredlines="0" coverablelines="26" totallines="60" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Configuration.CarMovementConfig" coveredlines="12" coverablelines="12" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Configuration.CarSpawnerConfig" coveredlines="0" coverablelines="1" totallines="13" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Factories.UnityCarFactory" coveredlines="19" coverablelines="23" totallines="51" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Model.CarSpawnerModel" coveredlines="16" coverablelines="16" totallines="34" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Model.FroggerGameModel" coveredlines="37" coverablelines="42" totallines="70" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Model.ObstacleModel" coveredlines="13" coverablelines="13" totallines="29" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.ApplicationQuitPresenter" coveredlines="7" coverablelines="7" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.CarSpawnerPresenter" coveredlines="11" coverablelines="11" totallines="24" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.GameHudPresenter" coveredlines="28" coverablelines="33" totallines="64" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.GameInputPresenter" coveredlines="31" coverablelines="42" totallines="75" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.MainMenuPresenter" coveredlines="18" coverablelines="18" totallines="40" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.NullApplicationQuitView" coveredlines="0" coverablelines="6" totallines="15" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.NullPlayerAnimationView" coveredlines="0" coverablelines="10" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.NullSceneNavigationView" coveredlines="0" coverablelines="8" totallines="19" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.ObstaclePresenter" coveredlines="11" coverablelines="11" totallines="25" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.PlayerAnimationPresenter" coveredlines="13" coverablelines="13" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.PlayerPresenter" coveredlines="17" coverablelines="20" totallines="45" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Presentation.SceneNavigationPresenter" coveredlines="10" coverablelines="10" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.GameHudView" coveredlines="40" coverablelines="40" totallines="79" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.GameInputView" coveredlines="0" coverablelines="17" totallines="35" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.MainMenuView" coveredlines="26" coverablelines="26" totallines="54" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.ObstacleView" coveredlines="4" coverablelines="4" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.PlayerAnimatorView" coveredlines="16" coverablelines="24" totallines="45" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.PlayerCameraView" coveredlines="13" coverablelines="15" totallines="29" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.PlayerView" coveredlines="32" coverablelines="38" totallines="71" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.UnityApplicationQuitView" coveredlines="3" coverablelines="3" totallines="13" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.UnityCarSpawnerView" coveredlines="15" coverablelines="23" totallines="51" coveredbranches="0" totalbranches="0" />
+    <class name="MVPFrogger.Views.UnitySceneNavigationView" coveredlines="11" coverablelines="14" totallines="30" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>
