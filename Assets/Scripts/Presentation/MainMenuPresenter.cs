@@ -5,17 +5,17 @@ namespace MVPFrogger.Presentation
     public sealed class MainMenuPresenter : IDisposable
     {
         private readonly IMainMenuView menuView;
-        private readonly ISceneNavigationView sceneNavigationView;
-        private readonly IApplicationQuitView applicationQuitView;
+        private readonly SceneNavigationPresenter sceneNavigationPresenter;
+        private readonly ApplicationQuitPresenter applicationQuitPresenter;
 
         public MainMenuPresenter(
             IMainMenuView menuView,
-            ISceneNavigationView sceneNavigationView,
-            IApplicationQuitView applicationQuitView)
+            SceneNavigationPresenter sceneNavigationPresenter,
+            ApplicationQuitPresenter applicationQuitPresenter)
         {
             this.menuView = menuView;
-            this.sceneNavigationView = sceneNavigationView;
-            this.applicationQuitView = applicationQuitView;
+            this.sceneNavigationPresenter = sceneNavigationPresenter;
+            this.applicationQuitPresenter = applicationQuitPresenter;
 
             menuView.StartGameRequested += OnStartGameRequested;
             menuView.ExitRequested += OnExitRequested;
@@ -29,12 +29,12 @@ namespace MVPFrogger.Presentation
 
         private void OnStartGameRequested()
         {
-            sceneNavigationView.LoadGame();
+            sceneNavigationPresenter.GoToGame();
         }
 
         private void OnExitRequested()
         {
-            applicationQuitView.Quit();
+            applicationQuitPresenter.Quit();
         }
     }
 }

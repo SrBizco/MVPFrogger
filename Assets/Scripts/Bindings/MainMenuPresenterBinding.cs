@@ -20,8 +20,10 @@ namespace MVPFrogger.Bindings
             IApplicationQuitView quitView = applicationQuitView != null
                 ? applicationQuitView
                 : NullApplicationQuitView.Instance;
+            SceneNavigationPresenter navigationPresenter = new SceneNavigationPresenter(navigationView);
+            ApplicationQuitPresenter quitPresenter = new ApplicationQuitPresenter(quitView);
 
-            presenter = new MainMenuPresenter(menuView, navigationView, quitView);
+            presenter = new MainMenuPresenter(menuView, navigationPresenter, quitPresenter);
         }
 
         private void OnDestroy()

@@ -252,13 +252,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65540268763204766, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
+    - {fileID: 8234279368799900920, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 489384, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 117610182337869586}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 159042, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5110889004811961806}
   m_SourcePrefab: {fileID: 100100000, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
+--- !u!1 &1296413492454764936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 159042, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
+  m_PrefabInstance: {fileID: 1296413492454644938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5110889004811961806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296413492454764936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f6e304d4c94c4fae3476d95a3c5f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefabs:
+  - {fileID: 5416642156684499121, guid: b2468cfbf3e83114e92c0646c7ec1bac, type: 3}
+  - {fileID: 5416642156684499121, guid: d563a7c4d0ca2f3419f93c5a234a64e6, type: 3}
+  - {fileID: 5416642156684499121, guid: d4a51e65790c0634b988911f2d898e0d, type: 3}
+  - {fileID: 5416642156684499121, guid: 8614d2a0e54e93d4e8f89cc177c3a98d, type: 3}
+  - {fileID: 5416642156684499121, guid: 603ad35c8cce98a4cb61ced6257c6093, type: 3}
+  - {fileID: 5416642156684499121, guid: df0d14b69d202384080307c824747773, type: 3}
+  - {fileID: 5416642156684499121, guid: b8b78e9aad4fc4f498a01aeb8e342d56, type: 3}
+  - {fileID: 5416642156684499121, guid: d504d1ed8373bd64f90943e2470ac46a, type: 3}
+  spawnPoint: {fileID: 117610182337869586}
+  carsParent: {fileID: 0}
+  carMovement:
+    Speed: 3
+    TravelDistance: 18
+    DestroyWhenRouteEnds: 1
 --- !u!4 &1296413492455091042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 489384, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
@@ -394,15 +430,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65540268763204766, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
+    - {fileID: 8234279368799900920, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 489384, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2738171845948303549}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 159042, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6225019499833792446}
   m_SourcePrefab: {fileID: 100100000, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
 --- !u!4 &4552679841129530158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 489384, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
   m_PrefabInstance: {fileID: 4552679841129624710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4552679841129732548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 159042, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
+  m_PrefabInstance: {fileID: 4552679841129624710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6225019499833792446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552679841129732548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f6e304d4c94c4fae3476d95a3c5f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefabs:
+  - {fileID: 5416642156684499121, guid: b2468cfbf3e83114e92c0646c7ec1bac, type: 3}
+  - {fileID: 5416642156684499121, guid: d563a7c4d0ca2f3419f93c5a234a64e6, type: 3}
+  - {fileID: 5416642156684499121, guid: d4a51e65790c0634b988911f2d898e0d, type: 3}
+  - {fileID: 5416642156684499121, guid: 8614d2a0e54e93d4e8f89cc177c3a98d, type: 3}
+  - {fileID: 5416642156684499121, guid: 603ad35c8cce98a4cb61ced6257c6093, type: 3}
+  - {fileID: 5416642156684499121, guid: df0d14b69d202384080307c824747773, type: 3}
+  - {fileID: 5416642156684499121, guid: b8b78e9aad4fc4f498a01aeb8e342d56, type: 3}
+  - {fileID: 5416642156684499121, guid: d504d1ed8373bd64f90943e2470ac46a, type: 3}
+  spawnPoint: {fileID: 2738171845948303549}
+  carsParent: {fileID: 0}
+  carMovement:
+    Speed: 3
+    TravelDistance: 18
+    DestroyWhenRouteEnds: 1

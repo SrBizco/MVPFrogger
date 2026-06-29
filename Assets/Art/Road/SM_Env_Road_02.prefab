@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 489384}
   - component: {fileID: 3339022}
   - component: {fileID: 2391502}
-  - component: {fileID: 8234279368799900920}
   m_Layer: 0
   m_Name: SM_Env_Road_02
   m_TagString: Untagged
@@ -88,28 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8234279368799900920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b379aeaa8badd6648bc5db20310eb574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carPrefab: {fileID: 5416642156684499121, guid: b2468cfbf3e83114e92c0646c7ec1bac, type: 3}
-  spawnPoint: {fileID: 6483057930753942}
-  carsParent: {fileID: 0}
-  spawnInterval: 2
-  initialDelay: 0
-  carMovement:
-    MinX: -8
-    MaxX: 8
-    Speed: 3
-    DestroyWhenLeavingRoad: 1
 --- !u!1 &8669640470475009193
 GameObject:
   m_ObjectHideFlags: 0

@@ -374,6 +374,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1560200369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &202902076 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4555767602858271504, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 1987766067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &283720613 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5128827515552868364, guid: ac2716849f7c02240a5b7ff723beebf9, type: 3}
@@ -1148,6 +1153,25 @@ MonoBehaviour:
   playerAnimatorView: {fileID: 283720618}
   hudView: {fileID: 848468471}
   sceneNavigationView: {fileID: 848468474}
+  trafficSpawners:
+  - SpawnerView: {fileID: 901000003}
+    SpawnInterval: 4
+    InitialDelay: 0
+  - SpawnerView: {fileID: 901000004}
+    SpawnInterval: 4
+    InitialDelay: 1
+  - SpawnerView: {fileID: 901000001}
+    SpawnInterval: 5
+    InitialDelay: 1
+  - SpawnerView: {fileID: 901000002}
+    SpawnInterval: 5
+    InitialDelay: 3
+  - SpawnerView: {fileID: 901000005}
+    SpawnInterval: 5
+    InitialDelay: 4
+  - SpawnerView: {fileID: 901000006}
+    SpawnInterval: 3
+    InitialDelay: 1
 --- !u!114 &848468471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1208,6 +1232,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSceneName: GameScene
   mainMenuSceneName: MainMenu
+--- !u!114 &901000001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6225019499833792446, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 1267253144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f6e304d4c94c4fae3476d95a3c5f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &901000002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5110889004811961806, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 1267253144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f6e304d4c94c4fae3476d95a3c5f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &901000003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6225019499833792446, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 1987766067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f6e304d4c94c4fae3476d95a3c5f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &901000004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5110889004811961806, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 1987766067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f6e304d4c94c4fae3476d95a3c5f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &901000005 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6225019499833792446, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 5289017478549319489}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f6e304d4c94c4fae3476d95a3c5f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &901000006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5110889004811961806, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 5289017478549319489}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f6e304d4c94c4fae3476d95a3c5f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &969631540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,6 +1438,11 @@ Transform:
   - {fileID: 1944126580}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1259840790 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1291056987669072732, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 1267253144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1267253144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1400,30 +1495,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5577804091091427454, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: initialDelay
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577804091091427454, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: spawnInterval
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577804091091427454, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: carMovement.TravelDistance
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186549039786952754, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: initialDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186549039786952754, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: spawnInterval
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186549039786952754, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: carMovement.TravelDistance
-      value: 30
-      objectReference: {fileID: 0}
+    - target: {fileID: 5110889004811961806, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1259840790}
+    - target: {fileID: 6225019499833792446, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1691071081}
     - target: {fileID: 9099992941825683746, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
       propertyPath: m_Name
       value: Road2
@@ -1877,6 +1956,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611693061}
   m_CullTransparentMesh: 1
+--- !u!4 &1624892392 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4555767602858271504, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 5289017478549319489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1691071081 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4555767602858271504, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 1267253144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1713114979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 117610182337869586, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
@@ -1989,6 +2078,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!4 &1964558682 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1291056987669072732, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 1987766067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1972561648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 117610182337869586, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
@@ -2042,26 +2136,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5577804091091427454, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: spawnInterval
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577804091091427454, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: carMovement.TravelDistance
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186549039786952754, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: initialDelay
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186549039786952754, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: spawnInterval
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186549039786952754, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: carMovement.TravelDistance
-      value: 30
-      objectReference: {fileID: 0}
+    - target: {fileID: 5110889004811961806, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1964558682}
+    - target: {fileID: 6225019499833792446, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 202902076}
     - target: {fileID: 9099992941825683746, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
       propertyPath: m_Name
       value: Road1
@@ -2075,6 +2157,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2297896127083891008, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
   m_PrefabInstance: {fileID: 1987766067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2139807269 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1291056987669072732, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+  m_PrefabInstance: {fileID: 5289017478549319489}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1311028104681432832
 PrefabInstance:
@@ -2217,26 +2304,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5577804091091427454, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: spawnInterval
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577804091091427454, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: carMovement.TravelDistance
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186549039786952754, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: initialDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186549039786952754, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: spawnInterval
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186549039786952754, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
-      propertyPath: carMovement.TravelDistance
-      value: 30
-      objectReference: {fileID: 0}
+    - target: {fileID: 5110889004811961806, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 2139807269}
+    - target: {fileID: 6225019499833792446, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1624892392}
     - target: {fileID: 9099992941825683746, guid: 225da093945b56d47b0779ec1a21bd0d, type: 3}
       propertyPath: m_Name
       value: Road3
